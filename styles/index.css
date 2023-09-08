@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+body {
+    background: rgb(231, 231, 255);
+    background: linear-gradient(90deg, rgba(231, 231, 255, 1) 0%, rgba(240, 249, 252, 1) 23%, rgba(223, 243, 250, 1) 40%, rgba(250, 230, 230, 1) 92%, rgba(255, 255, 255, 1) 100%);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    background-color: #e91e63;
+    font-weight: bolder;
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    margin: 10px 0px 10px 0px;
+}
+
+.contact {
+    margin: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact div {
+    margin: 2px;
+}
+
+.contact div a {
+    color: black;
+}
+
+.reach_out {
+    display: flex;
+}
+
+.github,
+.linkedin,
+.cv {
+    margin: 10px;
+    background-color: #EA4C89;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.linkedin {
+    background-color: #fa6400;
+}
+
+.cv {
+    background-color: #2ea44f;
+}
+
+.github div,
+.linkedin div,
+.cv div {
+    padding-left: 5px;
+    animation: slideFromTop 1s ease both, fadeIn 0.5s ease both;
+}
+
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.github:hover div,
+.linkedin:hover div,
+.cv:hover div {
+    visibility: hidden;
+}
+
+.github:hover img,
+.linkedin:hover img,
+.cv:hover img {
+    position: relative;
+    transform: translate(150%);
+    transition: 0.5s ease-out;
+}
+
+.about_me {
+    margin-top: 15px;
+}
+
+.about_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about_title div {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.skills {
+    font-family: 'Space Mono', monospace;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    padding: 32px;
+    margin: 15px auto;
+    border: 1px solid #eee;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+    min-width: 70%;
+    border-radius: 20px;
+}
+
+ol {
+    padding-left: 50px;
+}
+
+li {
+    color: #4F4F4F;
+    padding-left: 16px;
+    margin-top: 24px;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    word-wrap: break-word;
+}
+
+li:before {
+    content: '';
+    display: block;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    position: absolute;
+    top: -12px;
+    left: -46px;
+}
+
+strong {
+    color: #292929;
+}
+
+ol.alternating-colors li:nth-child(odd):before {
+    border-color: #0BAD02;
+}
+
+ol.alternating-colors li:nth-child(even):before {
+    border-color: #2378D5;
+}
+
+.scroll-to-top-toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #111827;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    font-weight: 400;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+}
+
+.scroll-to-top-toast.show {
+    display: block;
+}
+
+.scroll-to-top-message {
+    text-align: center;
+}
+
+.scroll-to-top-toast.show {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    .skills {
+        padding: 5px;
+    }
+
+    .skills_title {
+        padding: 10px;
+    }
+}
