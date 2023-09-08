@@ -71,7 +71,7 @@ body {
     background-color: #2ea44f;
 }
 
-.youtube{
+.youtube {
     background-color: #e62143;
 }
 
@@ -104,13 +104,15 @@ body {
 
 .github:hover div,
 .linkedin:hover div,
-.cv:hover div {
+.cv:hover div,
+.youtube:hover div {
     visibility: hidden;
 }
 
 .github:hover img,
 .linkedin:hover img,
-.cv:hover img {
+.cv:hover img,
+.youtube:hover img {
     position: relative;
     transform: translate(150%);
     transition: 0.5s ease-out;
