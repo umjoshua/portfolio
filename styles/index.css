@@ -77,7 +77,8 @@ body {
 
 .github div,
 .linkedin div,
-.cv div {
+.cv div,
+.youtube div {
     padding-left: 5px;
     animation: slideFromTop 1s ease both, fadeIn 0.5s ease both;
 }
